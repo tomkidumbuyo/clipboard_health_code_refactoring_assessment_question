@@ -1,4 +1,5 @@
 ## Refactoring
+
 This challenge is in JavaScript. Even if it's not your primary language, you should still give it a shot!
 
 You've been asked to refactor the attached function to make it easier to read and understand without changing its functionality. For this task, you should:

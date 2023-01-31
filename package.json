@@ -11,5 +11,8 @@
     "url": "git@github.com-personal:tomkidumbuyo/clipboard_health_code_refactoring_assessment_question.git"
   },
   "author": "tom.kidumbuyo",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "2.8.3"
+  }
 }
