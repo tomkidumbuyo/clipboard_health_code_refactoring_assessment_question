@@ -16,3 +16,31 @@ Based on the information given, break this ticket down into 2-5 individual ticke
 You will be graded on the level of detail in each ticket, the clarity of the execution plan within and between tickets, and the intelligibility of your language. You don't need to be a native English speaker, but please proof-read your work.
 
 ## Your Breakdown Here
+
+## Ticket 1
+Add FacilityAgentId to Agents
+### Summary
+When a facility is creating an Agent an Id is automatically created by the system instead of allowing the the Facility to use their own AgentID
+### Acceptance Criteria
+- Facility Should be able add `FacilityAgentId` when creating and updating Agents
+- The ID should be unique in that Facility
+
+### Story Points: 5
+### Notes
+- Create a migration that adds a column in the Agents table called FacilityAgentId
+- This migration should add the current AgentId as the default value.
+- Add an ID field in Create Agent form that is to be saved to FacilityAgentId
+- Add an ID field in Update Agent form that is to be saved to FacilityAgentId
+
+## Ticket 2
+Replace AgentId with FacilityAgentId when generating reports and displaying data for the Facility
+### Summary
+When getting reports and displaying Agent metadata, we can still see the agents system generated ID instead of the FacilityAddedID
+### Acceptance Criteria
+- the Agent id should be replaced by the `FacilityAgentId` when displaying agents Metadata.
+- the replacement should also appear when generating reports (PDF Reports).
+### Story Points: 1
+### Notes
+- Assuming that there is a repository that handles delivering data from the database. Replacing the agentId with facilityAgentId will provide a quick fix. 
+- The problem with this approach is for all the times your use this Id to perform queries since the FacilityAgentId is only unique to the Facility and can be duplicate in different facilities.
+- Th other approach is to change the value in `getShiftsByFacility` and `generateReport` to make this switch.
