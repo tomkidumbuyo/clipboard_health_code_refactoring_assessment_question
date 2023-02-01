@@ -1,18 +1,15 @@
 {
-  "name": "clipboard_health",
+  "name": "cbh-take-home-project",
   "version": "1.0.0",
-  "description": "This challenge is in JavaScript. Even if it's not your primary language, you should still give it a shot!",
-  "main": "index.js",
+  "description": "",
+  "main": " ",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com-personal:tomkidumbuyo/clipboard_health_code_refactoring_assessment_question.git"
-  },
-  "author": "tom.kidumbuyo",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "prettier": "2.8.3"
+    "jest": "^28.1.0"
   }
 }
